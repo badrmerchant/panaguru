@@ -1,0 +1,329 @@
+
+<h3 class="addQuestion">Quize Title:First Quiz</h3>
+<hr ng-init="questionBar=true">
+<div ng-show="questionBar">
+    <button type="submit" class="btn btn-success addQuestion1" ng-click="showQuestionType=true;questionBar=false" >Add Queston</button>
+    <button type="submit" class="btn btn-success addQuestion2">Add later</button>
+</div>
+
+<!--Select Question type-->
+<div ng-show="showQuestionType">
+    <h5 class="addQuestion">   Select Question type </h5>
+    <button type="submit" class="btn btn-success addQuestion1" ng-click="trueFalseForm=true;showQuestionType=false" >True and False Queston</button>
+    <button type="submit" class="btn btn-success "   ng-click="multipleChoice=true;showQuestionType=false"  >Multiple Choice Questioons</button>
+    <button type="submit" class="btn btn-success " ng-click="groupQuestion=true;showQuestionType=false" >Group Queston</button>
+    <button type="submit" class="btn btn-danger" ng-click="showQuestionType=false;questionBar=true" >cancel</button>
+</div>
+<br/>
+<pre>{{quizs | json}}</pre>
+
+
+<!--True and False Question Type-->
+
+<form class="form-horizontal createQuiz" role="form" ng-show="trueFalseForm">
+
+    <!--<input type="hidden" ng-model="obj.quesType" value="trueFalse">-->
+    <fieldset ng-init="obj.quesType=''">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Quiz title</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control  col-xs-9" id="inputEmail3" placeholder="Quiz Title"  ng-model="obj.quizTitle" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Quiz Description</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" rows="10"  placeholder="Quiz Description"  ng-model="obj.quizDescription"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1"
+                               ng-model="obj.writeAnswer"   ng-value="false" checked >
+                        False
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios28"    ng-model="obj.writeAnswer"         ng-value="true">
+                        True
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success" ng-click="trueFalseForm=false;showQuestionType=true;obj.quesType='trueFalse';saveQuestion()" >SUBMIT999999</button>
+
+                <button type="submit" class="btn btn-danger" ng-click="trueFalseForm=false;showQuestionType=true">Cancell99999</button>
+
+
+            </div>
+        </div>
+
+    </fieldset>
+    <pre>{{obj}}</pre>
+</form>
+
+
+<!--Multiple choice  Radio / Checkbox  Question Type-->
+
+
+
+
+<form ng-if="multipleChoice" class="form-horizontal createQuiz" role="form">
+    <fieldset ng-init="obj.quesType=''">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Quiz title</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control  col-xs-9" id="inputEmail312" placeholder="Quiz Title"   ng-model="obj.quizTitle">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Quiz Description</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" rows="10"  placeholder="Quiz Description" ng-model="obj.quizDescription"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="$parent.checked"> Is Single Select:  {{checked}}
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10"  ng-init="obj.answers=[]">
+                <div class="row" >
+                                                       <div class="col-lg-9" ng-repeat="ans in obj.answers">
+                        <ul><li>
+                            <div class="input-group">
+                        <span class="input-group-addon">
+
+                            <input ng-show="!checked" type="checkbox"  ng-model="ans.isCorrect"/>
+                            <input ng-show="checked" type="radio" name="correct" ng-value="ans.answer"  ng-model="ans.isCorrect"/>
+                       </span>
+                                <input type="text" class="form-control" ng-model="ans.answer" >
+
+
+                            </div><!-- /input-group -->
+                        </li>
+                        </ul>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+
+                            <button type="submit" class="btn btn-primary" ng-click="obj.answers.push({})" >Add Option</button>
+                            <button type="submit" class="btn btn-success" ng-click="xcv();saveQuestion();">SUBMIT</button>
+
+                            <button type="submit" class="btn btn-danger" ng-click="xcv()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </fieldset>
+    <pre>{{obj | json}}</pre>
+</form>
+
+
+</div>
+
+
+
+<!--Group  Question has   boolean and multiple-->
+
+<form class="createQuiz container" role="form" ng-show="groupQuestion">
+    <fieldset>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Paragraph title</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Quiz Title">
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Paragraph</label>
+            <textarea class="form-control" id="exampleInputPassword1" placeholder="Quiz Description"></textarea>
+        </div>
+        <div    ng-init="showQuestionGroup=false;">
+
+            <div  class="well addQuestionGroup " ng-repeat="ele in arrGroupQuestion"   ng-show="showQuestionGroup;" >
+
+                <ul><li>
+
+                        <span  >
+                         {{checked}}
+
+                       </span>
+
+
+                    <!-- /input-group -->
+                </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="row" ng-init="btnState=true">
+
+            <div ng-show="btnState">
+                <button type="submit" class="btn btn-success" ng-click="btnState=false;multipleChoiceGroup=false;groupQuestion=true;trueFalseGroup=true;add();" >True and False Queston</button>
+                <button type="submit" class="btn btn-success" ng-click="btnState=false;multipleChoiceGroup=true;groupQuestione=true;trueFalseGroup=false;"  >Multiple Choice Questioons</button>
+                <!--</div>-->
+                <hr/>
+                <div class="float-right">
+                    <!--&lt;!&ndash;<button type="submit" class="btn btn-primary" ng-click="add(checked)" >Add Optionffffff</button>&ndash;&gt;-->
+                    <button type="submit" class="btn btn-success" ng-click="groupQuestion=false;showQuestionType=true;">SUBMIT</button>
+                    <button type="submit" class="btn btn-danger" ng-click="groupQuestion=false;showQuestionType=true">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+
+</div>
+
+
+
+<!-- Group question"s   True and False Question Type-->
+
+
+<form class="form-horizontal createQuiz" role="form" ng-show="trueFalseGroup" >
+    <fieldset >
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Quiz title</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control  col-xs-9" id="inputEmail4" placeholder="Quiz Title">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Quiz Description</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" rows="10"  placeholder="Quiz Description"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1" checked>
+                        True
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios23" value="option2">
+                        False
+                    </label>
+                </div>
+                <div class="submit">
+                    <label>
+                        <!--<button type="button" name="submit" id="submit"   class="btn btn-info" on-click="showMultipleQuestion=true;btnState=false;">save</button>-->
+                        <button class="btn btn-success" ng-click="trueFalseGroup=false;showMultipleQuestion=true;btnState=true;showQuestionGroup=true;add1();" >Save</button>
+                    </label>
+                </div>
+                <hr/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+
+                <button type="submit" class="btn btn-success" ng-click="trueFalseGroup=false;groupQuestion=true;btnState=true;" >SUBMIT</button>
+
+
+                <button type="submit" class="btn btn-danger" ng-click="trueFalseGroup=false;groupQuestion=true;btnState=true;">Cancel</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+
+
+<!-- Group Question's  Multiple choice  Radio / Checkbox  Question Type-->
+
+
+<form class="form-horizontal createQuiz" role="form" ng-show="multipleChoiceGroup">
+    <fieldset>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Quiz title</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control  col-xs-9" id="inputEmail31" placeholder="Quiz Title">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Quiz Description</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" rows="10"  placeholder="Quiz Description"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox" ng-init="checked=false">
+                    <label>
+                        <input type="checkbox" ng-model="checked"> Is Single Select:  {{checked}}
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="row">
+                    <div class="col-lg-9" ng-repeat="ele in arrEles
+                    ">
+                        <ul><li>
+                            <div class="input-group">
+                        <span class="input-group-addon">
+
+                            <input ng-show="!checked" type="checkbox" value="c" ng-model="a" ng-checked=""/>
+                            <input ng-show="checked" type="radio" value="$index"  ng-model="a"/>
+                       </span>
+                                <input type="text" class="form-control">
+
+
+                            </div><!-- /input-group -->
+                        </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <!--<div class="submit">-->
+                            <!--<label>-->
+                            <!--<button type="button" name="submit" id="submit"   class="btn btn-info" on-click="showMultipleQuestion=true;btnState=false;">save</button>-->
+                            <button class="btn btn-success" ng-click="multipleChoiceGroup=false;showMultipleQuestion=true;btnState=true;showQuestionGroup=true;add1();" >Save</button>
+                            <!--</label>-->
+                            <!--</div>-->
+                            <button type="submit" class="btn btn-primary" ng-click="add(checked)" >Add Option</button>
+                            <hr/>
+                            <button type="submit" class="btn btn-success" ng-click="multipleChoiceGroup=false;groupQuestion=true;btnState=true;">SUBMIT</button>
+                            <button type="submit" class="btn btn-danger" ng-click="multipleChoiceGroup=false;groupQuestion=true;btnState=true;">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </fieldset>
+</form>
+
+
+</div>

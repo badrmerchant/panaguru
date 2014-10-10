@@ -1,0 +1,588 @@
+.well {
+    width: 30%;
+    margin: auto;
+    float: right;
+
+}
+.hero-unit{float: right;}
+.from-group{
+    width: 50;
+}
+.custom-ctrl {
+    width: 283px;
+}
+.pos{float:left;}
+.btn {
+    /* float: left; */
+    margin-top: 10px;
+}
+.bad{background-color: #2B3BAC;
+    width: 319px;
+    height: 87px;padding: 65px 210px; padding: 6px 12px; }
+.sam{float: right;}
+.navbar-inverse .navbar-brand {
+    color: #FFF;
+}
+.badarHtml{margin:0px);}
+.badarHeader{
+    font-size: 27px;padding-left: 14px;background-color:rgb(51,51,51);color:red;
+    margin-top: 38px;
+    margin-bottom: 0;
+}
+.badarSmall{color:#ffffff;margin-top: -38px;}
+.badarLogin{float:right;}
+.badarHeader11{
+    background-color: rgb(59,89,152);
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    float: right;
+    margin-top: -69px;
+    margin-left: 140PX;
+    margin-right: -110PX;
+}
+.badarHeader11:hover{
+    background-color: rgb(83, 126, 214);
+    color: #fff;
+}
+.mainHeading{background-color: rgb(19,168,158);}
+h1{height: 192px;
+    width: 1368px;
+    margin-left: -114px;
+    margin-top: -31px;
+    margin-right: -203px;
+    padding-left: 366px;
+    padding-top: 44px;
+    color: white;
+    /*background: linear-gradient(-45deg, #ffffff 16px, transparent 0), linear-gradient(30deg, #ffffff 16px, transparent 0);*/
+}
+.search{float:right;}
+.badarc{color: rgb(19,168,158);display: inline;}
+.badarp{float:left;background-color: white;}
+.d1{ width:386px;
+    padding: 10px;
+    border: 5px solid ;
+    margin:120px;
+    display: inline;
+    color:white;background-color:rgb(19,168,158);}
+.d2{display: inline; }
+
+.d3{ width: 640px;
+    padding: 10px;
+    border: 5px solid ;
+    margin: 60px;
+    color:white;background-color:rgb(19,168,158);}
+/*coy*/
+/*#########################################################################################################*/
+/*Theme*/
+/*#########################################################################################################*/
+/*==================================*/
+/*Headings*/
+/*==================================*/
+
+.headingColor{
+    color: #13a89e;
+}
+.heading{
+    font-weight: bold;
+}
+.headingGray{
+    color: #333333 !important;
+}
+.heading-ThreeD{
+    font-family: Garamond, serif;
+    line-height: 1em;
+    color: #fff9d6;
+    font-weight:bold;
+    font-size: 60px;
+    text-shadow:0px 0px 0 rgb(202,202,202),1px 1px 0 rgb(158,158,158), 2px 2px 0 rgb(115,115,115),3px 3px 2px rgba(0,0,0,0.6),3px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+}
+/*==================================*/
+/*BackGrounds*/
+/*==================================*/
+.well{
+    background-color: #e6e6e6;
+}
+.backgroundColor{
+    background-color: #ffffff;
+}
+.backgroundColorGreen{
+    background-color: #13a89e;
+    padding: 15px;
+}
+.backgroundColorRed{
+    background-color:#d11547;
+}
+.backgroundColorGray{
+    background-color: #e2e2e2;
+}
+.zigZagBG{
+    background:linear-gradient(-135deg, #13a89e 5px, transparent 0) 0 5px,linear-gradient(135deg, #13a89e 5px, #fff 0) 0 5px;
+    background-color: #13a89e;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: 10px 10px;
+}
+/*==================================*/
+/*Buttons*/
+/*==================================*/
+.btn:focus {
+    outline: none;
+}
+.btn-info{
+    background-color: #13a89e;
+    border-color: #13a89e;
+}
+.btn-info:hover{
+    background-color: #17c7bb;
+    border-color: #13a89e;
+}
+.btn-info:active{
+    background-color: #17c7bb;
+    border-color: #13a89e;
+}
+.btn-info:focus{
+    background-color: #17c7bb;
+    border-color: #13a89e;
+}
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info{
+    background-color: #17c7bb;
+    border-color: #13a89e;
+}
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a
+{
+    /*background-color: #F4F5F0;*/
+}
+/*==================================*/
+/*Scroll Bar*/
+/*==================================*/
+.scrollBar::-webkit-scrollbar{
+    width:10px;
+    background-color:#e8e7e7;
+}
+.scrollBar::-webkit-scrollbar-thumb{
+    background-color:#cfcfcf;
+    /*border-radius:10px;*/
+}
+.scrollBar::-webkit-scrollbar-thumb:hover{
+    background-color:#cfcfcf;
+    /*border:1px solid #333333;*/
+}
+.scrollBar::-webkit-scrollbar-thumb:active{
+    background-color:#cfcfcf;
+    /*border:1px solid #333333;*/
+}
+.scrollBar::-webkit-scrollbar-track{
+    /*border:1px gray solid;*/
+    /*border-radius:10px;*/
+    /*-webkit-box-shadow:0 0 6px gray inset;*/
+}
+/*==================================*/
+/*Hr line Separator*/
+/*==================================*/
+hr {
+    margin: 20px 0;
+}
+hr.style-one {
+    border: 0;
+    height: 1px;
+    background: #bfbfbf;
+    background-image: -webkit-linear-gradient(left, #ccc, #aaa9a9, #ccc);
+    background-image:    -moz-linear-gradient(left, #ccc, #aaa9a9, #ccc);
+    background-image:     -ms-linear-gradient(left, #ccc, #aaa9a9, #ccc);
+    background-image:      -o-linear-gradient(left, #ccc, #aaa9a9, #ccc);
+}
+/*==================================*/
+/*Border*/
+/*==================================*/
+
+.borderAll{
+    border:1px solid #bfbfbf;
+    margin-top: 5px;
+}
+.borderTop{
+    border-top: 1px solid #bfbfbf;
+}
+.borderBottom{
+
+    border-bottom: 1px solid #bfbfbf;
+}
+.borderRight{
+    border-right:1px solid #bfbfbf;
+}
+.borderLeft{
+    border-left: 1px solid #bfbfbf;
+}
+/*==================================*/
+/*Box Shadow*/
+/*==================================*/
+.boxShadow{
+    box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.75);
+}
+/*==================================*/
+/*Font White*/
+/*==================================*/
+.fontWhite{
+    color: #ffffff;
+}
+.fontRed{
+    color:#d11547;
+}
+.fontGreen{
+    color:#13a89e;
+}
+.fontLightGray{
+    color: #3d3d3d;
+}
+.fontSolidWhite{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+.fontWhite:hover{
+    color: #e3e3e3;
+}
+
+/*#########################################################################################################*/
+/*Pages Styles*/
+/*#########################################################################################################*/
+/*===============================*/
+/*Navigation Bar Styles*/
+/*===============================*/
+.navbar{
+    z-index: 100;
+    border-width: 0;
+    margin-bottom: 0;
+    height: 50px;
+    background-color: #333333;
+    border-bottom: 3px solid #13a89e;
+}
+/*.navbar-inverse .navbar-nav .open .dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu {*/
+/*background-color: #3344ff;*/
+/*color:#ffffff;*/
+/*background-color: #333333;*/
+/*color:#ffffff;*/
+
+/*}*/
+/*===============================*/
+/*Home page Styles*/
+/*===============================*/
+.height100{
+    height:100px !important;
+}
+.height250{
+    height:250px !important;
+}
+.height350{
+    height: 400px;
+    overflow-y: scroll;
+}
+.heightFull{
+    height: calc(100vh - 50px);
+}
+.width100Percent{
+    width: 100%;
+}
+
+.textDropShadow{
+    text-shadow: 3px 3px 1px #4a4949;
+}
+/*===============================*/
+/*User Home page Styles*/
+/*===============================*/
+.navbar-brand{
+    color: #ffffff;
+}
+.color{
+    color: #ffffff;
+}
+.colorGreen{
+    color: #13a89e;
+}
+.colorGreen:hover{
+    color: #17c7bb;
+}
+a.color:hover{
+    color: #fefefe;
+}
+.userHomeLinks:hover {
+}
+/*================================*/
+/*Course Page*/
+/*================================*/
+.courseTreeBG{
+    background: #e3e3e3;
+    height: calc(100vh - 50px);
+}
+/*================================*/
+/*ABN Tree*/
+/*================================*/
+.abnTree a{
+    margin-top: 5px;
+    color: #13a89e !important;
+}
+.nav-pills>li.active>a:hover {
+    background-color: #ffffff;
+    color: #13a89e !important;
+}
+
+.nav-pills>li.active>a{
+    background-color: rgba(255,255,255,0.5);
+    color: #13a89e !important;
+}
+/*================================*/
+/*Quiz Maker*/
+/*================================*/
+.QuizList:hover{
+    box-shadow: 0px 0px 10px 3px rgba(191, 191, 191, 0.75);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(191, 191, 191, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(191, 191, 191, 0.75);
+}
+/*================================*/
+/*Search Bar*/
+/*================================*/
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 30px;
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+/*================================*/
+/*Quiz Bank*/
+/*================================*/
+.questionTextArea{
+    width: 100%;
+    height: 60px;
+}
+/*================================*/
+/*Quiz Result*/
+/*================================*/
+
+.trueAnsColor{
+    color: #00ff00;
+}
+.falseAnsColor{
+    color: #ff0000;
+}
+.textPreLine{
+    white-space: pre-line;
+}
+
+.borderRightGray{
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+.hidden{
+    display: none;
+}
+
+
+/*================================*/
+/*Loading*/
+/*================================*/
+
+.loading {
+    position:fixed;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 1000;
+    display:none;
+    margin:0;
+    padding:0;
+}
+
+.loading > div > figure {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 25px;
+}
+.show > div {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/*================================*/
+/*Radio & Checkbox Align*/
+/*================================*/
+input[type="radio"]{
+    vertical-align:top;
+}
+input[type="checkbox"]{
+    vertical-align:top;
+}
+/*================================*/
+/*Success And Err */
+/*================================*/
+.infoBox{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.alertBox{
+    width: 200px;
+    height: 80px;
+    border-radius: 7px 7px 0px 0px;
+    background: #ffffff;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+}
+
+.successHeader{
+    height: 20px;
+    width: 100%;
+}
+.errorHeader{
+    height: 20px;
+    width: 100%;
+}
+.statusHide{
+    display: none;
+}
+.statusShow{
+    display: block;
+}
+
+
+/*================================*/
+/*quizDuration time color change*/
+/*================================*/
+[data-duration="0"]{
+    color: #d11547;
+}
+
+.well{
+    background-color: #f6f6f6;
+}
+
+/*================================*/
+/*Quiz Result*/
+/*================================*/
+.scoreBox{
+    height: 120px;
+}
+.scoreBoxHeader{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+.scoreBoxHeader > div{
+    padding-top: 3px;
+    font-weight: bold;
+    font-size: x-large;
+    color: #ffffff;
+    text-align: center;
+}
+.scoreCount{
+    font-weight: bold;
+    font-size: 250%;
+    text-align: center;
+    border-left: 1px solid #b8b8b8;
+    border-right: 1px solid #b8b8b8;
+    border-bottom: 1px solid #b8b8b8;
+}
+
+/*================================*/
+/*   QuizTaker checkbox counter   */
+/*================================*/
+
+body {
+    counter-reset: my-awesome-counter;
+}
+.QuizTaker input[type=checkbox], .QuizTaker input[type=radio]{
+    counter-increment: my-awesome-counter;
+    margin-right: 20px;
+}
+.QuizTaker input[type=checkbox]:after, .QuizTaker input[type=radio]:after {
+    content: counter(my-awesome-counter) ". ";
+    margin-left: 20px;
+}
+
+/*================================*/
+/*   Input and text area   */
+/*================================*/
+.badarBtn{
+    margin-left: -781px;
+    position: relative;
+    bottom: -231px; }
+.badarBtn2{
+    margin-left: -669px;
+    position: relative;
+    bottom: -231px; }
+/*================================*/
+/*   Quiz Maker  */
+/*================================*/
+.quiz{
+    color: rgb(19,168,158);
+    margin-left: 18px;
+
+
+
+}.quiz1{
+     color:black;
+     margin-left: 18px;
+     background-color: black;
+     border: 2;
+
+     height: 1px;
+ }
+.quiz3{
+    background-color: rgb(16,168,158);
+
+
+    margin-top: 15px;
+    witdh: -15px;
+    margin-right: -1px;
+    border-right: 1px solid black;
+}
+/*================================*/
+/*   create Quiz*/
+/*================================*/
+.createQuiz {
+    margin-top: 56px;
+    width: 85%;
+}
+
+
+.createQuiz1 {
+    margin-right: 10px;}
+/*================================*/
+/*   Add Question
+/*================================*/
+.addQuestion{
+    margin-left: 166px;
+}
+.addQuestion1{
+    margin-left: 166px;
+}
+.addQuestion2{
+    margin-left: 3px;
+}
+/*================================*/
+/*   Create Question
+/*================================*/
+.addQuestionRadio{
+
+}
+.float-right{
+    float: right;
+}
+/*================================*/
+/*   Add Question Group
+/*================================*/
+.addQuestionGroup{
+    display: inline-block;
+    margin-right: 10px;padding-left: 12px;}

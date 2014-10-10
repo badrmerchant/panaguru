@@ -1,0 +1,39 @@
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-10 marginTop20">
+        <!--Pass Code Div start-->
+        <div class="col-md-12 borderAll borderRadius5 marginTop50 padding30" ng-show="IsCode">
+            <h2 class="headingGray heading">Enter Feature Pass Code </h2>
+            <div class="input-group">
+                <input type="password" class="form-control" ng-model="passFeatureCode" placeholder="Enter Pass Feature Code">
+                        <span class="input-group-btn">
+                            <button class="btn btn-info" type="button" ng-click="passwordVerify(passFeatureCode)">Submit key</button>
+                        </span>
+            </div>
+        </div>
+        <!--END-->
+        <!--Course Create Start-->
+        <div ng-hide="IsCode" class="borderRadius10">
+            <div>
+                <h3 class="headingColor heading">{{createCourse}}</h3>
+            </div>
+            <div class="marginTop10">
+                <div class="input-group col-md-12" ng-show="createCourseBox">
+                    <input type="text" class="form-control marginTop10" id="courseTextField" name="courseName" ng-model="AddNCourseName"/>
+                    <button class="btn btn-success btn-sm marginTop20" ng-click="saveCourse();" >Create</button>
+                    <button class="btn btn-danger btn-sm marginTop20 marginLeft5" ng-click="backToUserHome();"ng-disabled="!(!!AddNCourseName)" >Cancel</button>
+                </div>
+
+                <!-added successfully-->
+                <div class="input-group col-md-12" ng-show="saveCourseBox">
+                    <h3 class="headingGray heading">{{AddNCourseName}} Added Successfully</h3>
+                    <div class="marginTop20">
+                        <button class="btn btn-info btn-sm" ng-click="backToUserHome();">Back</button>
+                        <button class="btn btn-info btn-sm" ng-click="backToCreateCourse();">Add Another Course</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END-->
+    </div>
+</div>

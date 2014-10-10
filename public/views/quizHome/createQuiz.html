@@ -1,0 +1,97 @@
+
+<!--<div>-->
+
+
+
+    <!--<label for="name">Title</label>-->
+            <!--<input class="createQuiz  col-xs-9" placeholder="Title" id="name" type="text" data-ng-model="title" />-->
+
+    <!--<label for="name12">Title</label>-->
+        <!--<textarea id="name12" class="col-xs-9 createQuiz1" rows="10" data-ng-model="textArea" placeholder="Description" ></textArea>-->
+    <!--<label for="name">Title</label>-->
+        <!--<input class="col-xs-9 createQuiz1" id="focusedInput2" type="text" data-ng-model="title"  placeholder="Passing Score" />-->
+
+    <!--<label for="name">Title</label>-->
+    <!--<input class="col-xs-9 createQuiz3 " id="focusedInput2" type="text" data-ng-model="title" placeholder="Proctoring"  />-->
+
+    <!--<label for="name">Title</label>-->
+        <!--<input class="col-xs-9 createQuiz4" id="focusedInput3" type="text" data-ng-model="title"   placeholder="duration"/>-->
+
+
+
+
+
+
+
+
+
+
+
+<!--</div>-->
+
+<!--<button >Cancel</button>-->
+
+<!--</br>-->
+
+
+<!--<button >Save</button>-->
+
+<!--<form action="demo_form.asp">-->
+    <!--<label for="male">Male</label>-->
+    <!--<input type="radio" name="sex" id="male" value="male"><br>-->
+    <!--<label for="female">Female</label>-->
+    <!--<input type="radio" name="sex" id="female" value="female"><br><br>-->
+    <!--<input type="submit" value="Submit">-->
+<!--</form>-->
+<!--<form class="form-horizontal" role="form">-->
+    <!--<div class="form-group">-->
+        <!--<label for="inputCity" class="col-xs-2 control-label createQuiz1"> Quiz Title</label>-->
+        <!--<div class="col-sm-4">-->
+            <!--<input type="text" class="form-control createQuiz" id="inputCity" placeholder="Input text">-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</form>-->
+
+<form class="form-horizontal createQuiz" role="form" ng-init="obj.questions=[]">
+    <fieldset >
+    <div class="form-group">
+        <label for="input1" class="col-sm-2 control-label">Quiz title</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control  col-xs-9" id="input1" placeholder="Quiz Title"    ng-model="obj.quizTitle"    >{{quizTitle}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="input2" class="col-sm-2 control-label">Quiz Description</label>
+        <div class="col-sm-8">
+            <textarea class="form-control" rows="10"  placeholder="Quiz Description" id="input2"   ng-model="obj.quizDescription" ></textarea>{{quizDescription}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="input3" class="col-sm-2 control-label">Passing Score</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" id="input3" placeholder="Passing score"  ng-model="obj.passingScore" >{{passingScore}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="input4" class="col-sm-2 control-label">Proctoring Key</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" id="input4" placeholder="Proctoring Key"    ng-model="obj.proctoringKey" >{{proctoringKey}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="input5" class="col-sm-2 control-label">Duration</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" id="input5" placeholder="Duration"   ng-model="obj.duration" >{{duration}}
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success createQuiz1" ng-click="createQuiz()" >Save</button>
+            <button type="submit" class="btn btn-danger  ">Cancel</button>
+        </div>
+    </div>
+        </fieldset>
+</form>
+<pre>{{quizs}}</pre>
+
+

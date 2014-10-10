@@ -1,0 +1,119 @@
+<div class="row">
+    <div class="col-md-12  marginTop20">
+        <div class="col-md-12 borderRadius10">
+            <div class="col-md-6">
+                <h3 class="headingColor heading">{{loginPersonName}}</h3>
+            </div>
+            <div class="col-md-6 paddingTop10">
+                <form >
+                    <div class="left-inner-addon">
+                        <i class="glyphicon glyphicon-search colorGreen"></i>
+                        <input id="search" type="text" class="form-control" data-ng-model="find"/>
+                        <ul> Search result
+                            <li  class="list-group-item marginTop5" ng-repeat="fin in newItems | filter:find" ng-show="showSearch">
+                                {{ fin.course }}
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+
+            </div>
+
+
+            <hr class="style-one"/>
+            <div class="col-md-12 marginTop10">
+                <div class="col-md-6">
+                    <div class="backgroundColorGreen padding10">
+                        <span class="fontSolidWhite fontLarge fontWeightBold userHomeLinks" ng-click="setJoinedCourse();">Joined Course's</span>
+                    </div>
+                    <ul class="listStyleNone list-group scrollBar">
+                        <!--displayLimitFilter(courseJoinedArray,displayLimit)-->
+                        <li ng-repeat="canJoin in joinCoursesArr track by $index" class="list-group-item marginTop5">
+                            <a ng-click="setJoinedCourse($index)">{{canJoin.course}}</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <div class="col-md-6">
+
+
+                    <div class="backgroundColorGreen padding10">
+                        <span class="fontSolidWhite fontLarge fontWeightBold userHomeLinks" ng-click="goToCourseList();">Created Course's</span>
+                        <a href="#createCourse" class="color" ng-show="IsCreateCourse"><span class="glyphicon glyphicon-plus pull-right marginTop5"></span></a>
+                    </div>
+                    <ul  class="listStyleNone list-group scrollBar">
+                        <!--displayLimitFilter(coursesArray.courses,displayLimit)2-->
+
+                        <li data-ng-repeat="course in createCourseArr track by $index" class="list-group-item marginTop5" >{{course.course}}
+                            <!--<a href="#/courseHome" ng-click="sendCourseName(course.name,course._id)">{{course.name}}</a>-->
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="col-md-12">
+                    <div class="backgroundColorGreen padding10">
+                        <span class="fontSolidWhite fontLarge fontWeightBold userHomeLinks">Recommended Course's</span>
+                    </div>
+
+
+
+                    <div class="col-md-12 borderAll borderRadius5 marginTop5 padding5 backgroundColor QuizList" ng-repeat="course in recommendedCourses track by $index" >
+                        <!--Course Title-->
+                        <span class="font20px fontLightGray">{{course.course}}</span>
+
+                        <button class="btn btn-info btn-sm pull-right" data-toggle="modal"  ng-click="getClasses(course);" ng-hide="isJoined(course)" >
+                            Join
+                        </button>
+                        <span class="colorGreen font20px pull-right" ng-show="isJoined(course)">
+                           Joined
+                        </span>
+                    </div>
+
+
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">Available Classes</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <!--&lt;!&ndash;If no Class Available Show this Div-->
+                                    <div ng-show="classNotAvailable">
+                                        <h3>Sorry No Class Available</h3>
+                                    </div>
+                                    <!--Class List Div-->
+                                    <div ng-show="classAvailable">
+                                        <ul class="list-group listStyleNone">
+                                            <li ng-repeat="class in joinCoursesArr" class="list-group-item">
+                                                <span class="font20px">{{class[$index]}}</span>
+                                                <input type="button" value="Join" class="btn btn-info btn-sm pull-right" ng-click="joinClass(class._id,class.title)" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

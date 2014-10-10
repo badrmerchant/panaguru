@@ -1,0 +1,43 @@
+<div class="col-xs-10" >
+<h3 class="quiz">{{quizMakerHome}}</h3>
+<hr class="quiz1" >
+ </div>
+
+
+<div style="border-left:thin    black solid; position:absolute; right:266px; height:729px;" />
+<div class="col-xs-2  ">
+    <button class="btn btn-lg btn-primary btn-block quiz3"   ng-click="goToQuizHome('/createQuiz')" type="submit">Create Quiz</button>
+</div>
+
+<!--quiz list-->
+<div class="col-md-9 borderAll borderRadius5 marginTop5 padding5 backgroundColor QuizList" ng-repeat="quiz in quizArray1 track by $index " >
+    <span class="font20px">{{quiz.title}}</span>
+    <!--Option Button-->
+    <div class="btn-group pull-right">
+        <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
+            Option's
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a ng-click="goToQuizHome('/courseHomePage')">Publish</a></li>
+            <li ><a ng-click="goToQuizHome(quiz);">Quiz Home</a></li>
+            <li><a>Delete</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!--<ul  class="listStyleNone list-group">-->
+<!--<li ng-repeat="quiz in quizArray track by $index" class="list-group-item marginTop5">-->
+<!--{{quiz}}-->
+<!--</li>-->
+<!--</ul>-->
+</div>
+
+
+
+
+<!--<div style="border-left:thin    black solid; position:absolute; right:266px; height:729px;" />-->
+<!--<div class="col-xs-2  ">-->
+    <!--<button class="btn btn-lg btn-primary btn-block quiz3"   ng-click="goToQuizHome('/createQuiz')" type="submit">Create Quiz</button>-->
+<!--</div>-->
