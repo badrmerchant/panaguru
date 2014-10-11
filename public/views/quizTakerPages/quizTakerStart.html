@@ -1,19 +1,19 @@
 <div class="col-md-12 backgroundColorGreen padding5 marginTop10" ng-hide="">
-    <span class="fontSolidWhite fontLarge fontWeightBold paddingLeft5 borderRadius5">Welcome to:{{currentTitle.venue}}</span></br>
+    <span class="fontSolidWhite fontLarge fontWeightBold paddingLeft5 borderRadius5">Welcome to:{{currentTitle["course"]}}</span></br>
 
 
-</div>
+</div  ng-hide="firstQuestion" >
 <div class="row">
-    <div class="col-md-3 col-md-offset-3">Quiz Title:{{}}</div>
+    <div class="col-md-3 col-md-offset-3">Quiz Title:{{questions[0]["quizTitle"]}}</div>
 
 </div><div class="row">
-    <div class="col-md-3 col-md-offset-3">Description:{{}} </div>
+    <div class="col-md-3 col-md-offset-3">Description:{{questions[0]["quizDescription"]}} </div>
 
 </div><div class="row">
-    <div class="col-md-3 col-md-offset-3">Passing Score:{{}}</div>
+    <div class="col-md-3 col-md-offset-3">Passing Score:{{questions[0]["passingScore"]}}</div>
 
 </div><div class="row">
-    <div class="col-md-3 col-md-offset-3">Quiz Duration:{{}}</div>
+    <div class="col-md-3 col-md-offset-3">Quiz Duration:{{questions[0]["duration"]}}</div>
 
 </div>
-<button type="button" class="btn btn-success quizTakerStart">continue</button>
+<button type="button" class="btn btn-success quizTakerStart"  ng-hide="firstQuestion" on-click="ng-hide=true">continue</button>

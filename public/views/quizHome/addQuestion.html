@@ -2,7 +2,7 @@
 <h3 class="addQuestion">Quize Title:First Quiz</h3>
 <hr ng-init="questionBar=true">
 <div ng-show="questionBar">
-    <button type="submit" class="btn btn-success addQuestion1" ng-click="showQuestionType=true;questionBar=false" >Add Queston</button>
+    <button type="submit" class="btn btn-success addQuestion1" ng-click="showQuestionType=true;questionBar=false" >Add Question</button>
     <button type="submit" class="btn btn-success addQuestion2">Add later</button>
 </div>
 
@@ -25,15 +25,15 @@
     <!--<input type="hidden" ng-model="obj.quesType" value="trueFalse">-->
     <fieldset ng-init="obj.quesType=''">
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Quiz title</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">Question title</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control  col-xs-9" id="inputEmail3" placeholder="Quiz Title"  ng-model="obj.quizTitle" >
+                <input type="text" class="form-control  col-xs-9" id="inputEmail3" placeholder="Question Title"  ng-model="obj.quizTitle" >
             </div>
         </div>
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Quiz Description</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">Question Description</label>
             <div class="col-sm-8">
-                <textarea class="form-control" rows="10"  placeholder="Quiz Description"  ng-model="obj.quizDescription"></textarea>
+                <textarea class="form-control" rows="10"  placeholder="Question Description"  ng-model="obj.quizDescription"></textarea>
             </div>
         </div>
 
@@ -56,9 +56,9 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-success" ng-click="trueFalseForm=false;showQuestionType=true;obj.quesType='trueFalse';saveQuestion()" >SUBMIT999999</button>
+                <button type="submit" class="btn btn-success" ng-click="trueFalseForm=false;showQuestionType=true;obj.quesType='trueFalse';saveQuestion()" >SUBMIT</button>
 
-                <button type="submit" class="btn btn-danger" ng-click="trueFalseForm=false;showQuestionType=true">Cancell99999</button>
+                <button type="submit" class="btn btn-danger" ng-click="trueFalseForm=false;showQuestionType=true">Cancel</button>
 
 
             </div>
