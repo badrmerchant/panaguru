@@ -29,6 +29,9 @@ var panaApp=angular.module('panaApp',['ngRoute','ngFacebook','ui.bootstrap','ui.
             .when('/addQuestion',
             {templateUrl: 'views/quizHome/addQuestion.html',
                 controller: 'addQuestionCtrl'})
+            .when('/quizTaker',
+            {templateUrl: 'views/quizTakerPages/quizTakerStart.html',
+                controller: 'quizTakerCtrl'})
             .otherwise({
                 redirectTo: '/'
             });
