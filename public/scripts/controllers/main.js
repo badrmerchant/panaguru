@@ -97,7 +97,7 @@ panaApp.controller("userHomeCtrl",function ($rootScope,$scope,$routeParams,$loca
             $location.path("courseHomePage");
         };
 
-// serch for course
+// search for course
         $scope.find = "";
         $scope.showSearch=false;
         $scope.newItems = (mainFactory.getRecommendCourses()).slice(0);

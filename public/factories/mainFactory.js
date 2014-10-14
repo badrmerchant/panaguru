@@ -1,4 +1,4 @@
-panaApp.factory('mainFactory',function($localstorage,$modal){ alert("main factory");
+panaApp.factory('mainFactory',function($localstorage,$modal){
     var loginPersonName="";
     var otherCourses=[{id:'0',course:"Physics",venue:"SSUET",isJoin:false},
         {id:'1',course:"Chemistry", venue:"Saylani",isJoin:false},{id:'2',course:"Biology",venue:"SSUET",isJoin:false},{id:'3',course:"computer",venue:"Saylani",isJoin:false},{id:'4',course:"Account",venue:"SSUET"},

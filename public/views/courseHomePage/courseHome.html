@@ -1,5 +1,10 @@
-<div class="col-md-3 col-xs-3 courseTreeBG">
+<div class="col-md-3 col-xs-3 courseTreeBG" style="margin-right: 15px;">
     <style>
+        .page-title-big{
+            font-size: 28px;
+            font-weight: bold;
+            padding: 5px;
+        }
         .courseTreeBG .btn-group {
             margin: 10px 55px;
         }
@@ -57,8 +62,7 @@
             <button type="button" class="btn btn-info">Delete</button>
         </div>
         <div class="col-md-12 backgroundColorGreen padding5 marginTop10" ng-hide="isOwner">
-            <span class="fontSolidWhite fontLarge fontWeightBold paddingLeft5 borderRadius5">Class:{{currentTitle.venue}}</span></br>
-            <span class="fontSolidWhite fontLarge fontWeightBold paddingLeft5 borderRadius5" >{{currentTitle.course}}</span>
+            <span class="fontSolidWhite fontLarge fontWeightBold paddingLeft5 borderRadius5">Class: {{currentTitle.course}}</span>
         </div>
         <!-- Nested list template -->
         <script type="text/ng-template" id="items_renderer.html">
@@ -85,7 +89,7 @@
     <!-- Nested list template -->
 </div>
 
-<div class="headingColor fontLarge fontWeightBold marginLeft10 ng-binding">Welcome to {{currentTitle.course}}</div>
+<div class="headingColor fontLarge fontWeightBold marginLeft10 ng-binding page-title-big">Welcome to {{currentTitle.course}}</div>
 
 
 <div>
@@ -108,7 +112,8 @@
                     <p>
                         <input class="col-xs-6" id="focusedInput" type="text" data-ng-model="title"/>{{title}}
                     </p>
-
+                    <br/>
+                    Description:
                     <p>
                         <textarea class="col-xs-6" rows="10" style="margin-top: 16px;"
                                   data-ng-model="textArea"></textArea>{{textArea}}

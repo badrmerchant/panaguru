@@ -109,7 +109,7 @@ panaApp.controller("courseHomeCtrl",function($scope,mainFactory,$rootScope,cours
         }
 //start quiz
 $scope.startQuizInfo=function(){
-    alert("wow");
+
   $scope.quizs=  quizMakerFactory.getQuizs();
    $scope.quizs.forEach(function(entry){console.log(entry)});
     }
