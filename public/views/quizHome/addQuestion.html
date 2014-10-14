@@ -3,7 +3,7 @@
 <hr ng-init="questionBar=true">
 <div ng-show="questionBar">
     <button type="submit" class="btn btn-success addQuestion1" ng-click="showQuestionType=true;questionBar=false" >Add Question</button>
-    <button type="submit" class="btn btn-success addQuestion2">Add later</button>
+    <button type="submit" class="btn btn-success addQuestion2" ng-click="back()">Add later</button>
 </div>
 
 <!--Select Question type-->
@@ -15,7 +15,7 @@
     <button type="submit" class="btn btn-danger" ng-click="showQuestionType=false;questionBar=true" >cancel</button>
 </div>
 <br/>
-<pre>{{quizs | json}}</pre>
+<!--<pre>{{quizs | json}}</pre>-->
 
 
 <!--True and False Question Type-->
@@ -65,7 +65,7 @@
         </div>
 
     </fieldset>
-    <pre>{{obj}}</pre>
+  <!--//  <pre>{{obj}}</pre>-->
 </form>
 
 
@@ -131,7 +131,7 @@
         </div>
         </div>
     </fieldset>
-    <pre>{{obj | json}}</pre>
+    <!--<pre>{{obj | json}}</pre>-->
 </form>
 
 

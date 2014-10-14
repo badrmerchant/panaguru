@@ -9,7 +9,7 @@ panaApp.controller("quizMakerCtrl", function ($scope, mainFactory, $rootScope, c
 //}
 
     $scope.goToQuizHome = function (path) {
-        alert("saaaaaaaa");
+
         $location.path(path);
 
     }

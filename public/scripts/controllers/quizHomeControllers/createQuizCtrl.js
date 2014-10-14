@@ -1,9 +1,10 @@
 /**
  * Created by Badar on 9/3/2014.
  */
-panaApp.controller("createQuizCtrl", function ($scope, mainFactory, $rootScope, courseHomeFactory, $location, quizMakerFactory) {
+panaApp.controller("createQuizCtrl", function ($scope, mainFactory, $rootScope, courseHomeFactory, $location, quizMakerFactory,$window) {
    $scope.quizs=quizMakerFactory.guizs;
     //$scope.quizs;
+    $scope.go=function(){ $window.history.back();}
     $scope.createQuiz=function(){
         quizMakerFactory.getQuizs().push($scope.obj);
         $scope.quizs=quizMakerFactory.getQuizs();

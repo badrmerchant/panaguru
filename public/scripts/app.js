@@ -1,9 +1,9 @@
 
 var panaApp=angular.module('panaApp',['ngRoute','ngFacebook','ui.bootstrap','ui.tree'])
-    .run(function($rootScope){alert("run 2");
+    .run(function($rootScope){//alert("run 2");
         $rootScope.currentCourse="";
     })
-    .config(['$routeProvider','$facebookProvider', function($routeProvider,$facebookProvider ) {alert("config 1");
+    .config(['$routeProvider','$facebookProvider', function($routeProvider,$facebookProvider ) {//alert("config 1");
         $routeProvider
             .when('/', {
                 templateUrl: 'views/login.html',

@@ -10,7 +10,7 @@
  */
 
 angular.module('ngFacebook', [])
-    .provider('$facebook', function() {alert("ng facebook provider");
+    .provider('$facebook', function() {
         var config = {
             permissions:    'email',
             appId:          null,

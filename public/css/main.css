@@ -25,9 +25,10 @@
 }
 .badarHtml{margin:0px);}
 .badarHeader{
-    font-size: 27px;padding-left: 14px;background-color:rgb(51,51,51);color:red;
+    font-size: 27px;
+    padding-left: 14px;background-color:rgb(51,51,51);color:red;
     margin-top: 38px;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
 }
 .badarSmall{color:#ffffff;margin-top: -38px;}
 .badarLogin{float:right;}
@@ -41,7 +42,7 @@
     float: right;
     margin-top: -69px;
     margin-left: 140PX;
-    margin-right: -110PX;
+    margin-right: -42PX;
 }
 .badarHeader11:hover{
     background-color: rgb(83, 126, 214);

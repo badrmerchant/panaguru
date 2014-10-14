@@ -1,5 +1,5 @@
 panaApp.controller('loginCtrl', function($scope , $facebook,$location,mainFactory,$localstorage,$rootScope) {
-alert("log in Ctrl have injected Main factory so first");
+
 
     $scope.isLoggedIn = false;
     $scope.login = function() {

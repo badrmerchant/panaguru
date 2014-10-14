@@ -1,7 +1,11 @@
 /**
  * Created by Badar on 9/4/2014.
  */
-panaApp.controller("addQuestionCtrl", function ($scope, mainFactory, $rootScope, courseHomeFactory, $location, quizMakerFactory) {
+panaApp.controller("addQuestionCtrl", function ($scope, mainFactory, $rootScope, courseHomeFactory, $location, quizMakerFactory,$window) {
+
+   $scope.back=function(){
+       $window.history.back();
+   }
     $scope.questions=quizMakerFactory.makeQuizTaker;
    var questionArray=[];
     $scope.arrGroupQuestion = [];
