@@ -1,13 +1,13 @@
 /**
  * Created by Badar on 9/4/2014.
  */
-panaApp.controller("addQuestionCtrl", function ($scope, mainFactory, $rootScope, courseHomeFactory, $location, quizMakerFactory,$window) {
+panaApp.controller("addQuestionCtrl", function ($scope, mainFactory, $rootScope, courseHomeFactory, $location, quizMakerFactory, $window) {
 
-   $scope.back=function(){
-       $window.history.back();
-   }
-    $scope.questions=quizMakerFactory.makeQuizTaker;
-   var questionArray=[];
+    $scope.back = function () {
+        $window.history.back();
+    }
+    $scope.questions = quizMakerFactory.makeQuizTaker;
+    var questionArray = [];
     $scope.arrGroupQuestion = [];
     $scope.go = function (path) {
 
@@ -34,16 +34,15 @@ panaApp.controller("addQuestionCtrl", function ($scope, mainFactory, $rootScope,
 //
 //    };
 
-    $scope.quizs=quizMakerFactory.quizs;
-    $scope.saveQuestion = function () {console.log("ssss");
+    $scope.quizs = quizMakerFactory.quizs;
+    $scope.saveQuestion = function () {
+        console.log("ssss");
         quizMakerFactory.quizs[quizMakerFactory.currentQuizIndex].questions.push($scope.obj);
-        $scope.obj={};
+        $scope.obj = {};
     };
 
 
-
-
-/**
+    /**
      * Multiple  choice question add in quizMakerFactory
      */
 
@@ -61,9 +60,9 @@ panaApp.controller("addQuestionCtrl", function ($scope, mainFactory, $rootScope,
         }
     });
 
-    $scope.xcv=function(){
-        $scope.multipleChoice=false;
-        $scope.showQuestionType=true;
+    $scope.xcv = function () {
+        $scope.multipleChoice = false;
+        $scope.showQuestionType = true;
     }
 //
 //    $scope.saveMultiple = function () {
@@ -89,9 +88,6 @@ panaApp.controller("addQuestionCtrl", function ($scope, mainFactory, $rootScope,
 //
 //
 //        }
-
-
-
 
 
     /**

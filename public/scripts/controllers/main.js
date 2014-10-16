@@ -97,6 +97,7 @@ panaApp.controller("userHomeCtrl",function ($rootScope,$scope,$routeParams,$loca
             $location.path("courseHomePage");
         };
 
+// sea
 // search for course
         $scope.find = "";
         $scope.showSearch=false;

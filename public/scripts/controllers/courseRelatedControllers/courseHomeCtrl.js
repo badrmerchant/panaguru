@@ -30,38 +30,8 @@ panaApp.controller("courseHomeCtrl",function($scope,mainFactory,$rootScope,cours
         $scope.isAddPage=false;
      $scope.isShowContent=true;
     }*/
-    $scope.$watch( 'abc.currentNode', function( newObj, oldObj ) {
-        if( $scope.abc && angular.isObject($scope.abc.currentNode) ) {
-            console.log( 'Node Selected!!' );
-            console.log( $scope.abc.currentNode );
-        }
-    }, false);
-    $scope.list = [{
-        "id": 1,
-        "title": $rootScope.currentCourse.course,
-        "items": [{
-            "id": 2,
-            "title": "into to HTML",
-            content:{title:'into to HTMl',desc:'bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla '},
-            "items": [{
-                "id": 21,
-                "title": "create form",
-                "items": [{
-                    "id": 211,
-                    "title": "CSS3",
-                    "items": []
-                }, {
-                    "id": 212,
-                    "title": "JAVASCRIPT",
-                    "items": []
-                }]
-            }, {
-                "id": 22,
-                "title": " NODEJS",
-                "items": []
-            }]
-        }]
-    }];
+
+
 
     $scope.selectedItem = {};
 
