@@ -117,7 +117,7 @@ panaApp.controller("userHomeCtrl",function ($rootScope,$scope,$routeParams,$loca
          console.log($scope.newItems);
          }*/
         document.getElementById('search').addEventListener('keydown',function(e){
-            //console.log((e.keyCode|| e.which));console.log(e+"badar");
+            console.log((e.which));console.log(e+"badar");
             if((e.keyCode|| e.which)===13){
                 $scope.$apply(function(){
                     $scope.showSearch=true;
