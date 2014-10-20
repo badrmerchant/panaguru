@@ -2,18 +2,67 @@
     <span class="fontSolidWhite fontLarge fontWeightBold paddingLeft5 borderRadius5">Welcome to:{{currentTitle["course"]}}</span></br>
 
 
-</div  ng-hide="firstQuestion" >
-<div class="row">
-    <div class="col-md-3 col-md-offset-3">Quiz Title:{{questions[0]["quizTitle"]}}</div>
-
-</div><div class="row">
-    <div class="col-md-3 col-md-offset-3">Description:{{questions[0]["quizDescription"]}} </div>
-
-</div><div class="row">
-    <div class="col-md-3 col-md-offset-3">Passing Score:{{questions[0]["passingScore"]}}</div>
-
-</div><div class="row">
-    <div class="col-md-3 col-md-offset-3">Quiz Duration:{{questions[0]["duration"]}}</div>
-
 </div>
-<button type="button" class="btn btn-success quizTakerStart"  ng-hide="firstQuestion" on-click="ng-hide=true">continue</button>
+<div ng-init="firstQuestion=true" >
+    <div ng-show="firstQuestion" >
+        <ul>
+            <li ng-repeat="questions in questions track by $index">
+                <div class="col-md-7 col-md-offset-6">Quiz Title:{{questions["quizTitle"]}}</div>
+
+
+                <div class="col-md-7 col-md-offset-6">Description:{{questions["quizDescription"]}}</div>
+
+
+                <div class="col-md-7 col-md-offset-6">Passing Score:{{questions["passingScore"]}}</div>
+
+
+                <div class="col-md-7 col-md-offset-6">Quiz Duration:{{questions["duration"]}}
+
+                </div>
+                <div class="col-md-7 col-md-offset-6">Quiz Duration:{{questions["duration"]}}
+                    <button type="button" class="btn btn-success " >
+                        continue
+                    </button>
+                </div>
+                <div class="col-md-7 col-md-offset-6">Question type:{{questions["questions"][$index]["quesType"]}}</br>
+                                                      Question description:{{questions["questions"][$index]["quizDescription"]}}
+                    </br>
+                    Question answers:{{questions["questions"][$index]["answers"]}}
+                    </br>
+                   <!--// Question description:{{questions["questions"][$index][""]}}-->
+
+
+
+
+                </div>
+
+                <div class="col-md-7 col-md-offset-6">Questionwwwwwwwwwwwwwwwwwwwwww:{{[$index]}}
+
+                </div>
+            </li>
+        </ul>
+
+
+
+
+    </div>
+</div>
+
+
+<!--<div class="row"   >-->
+<!--<ul><li ng-repeat="questions in questions">-->
+<!--Quiz Title:{{questions["quizTitle"]}}-->
+<!--Description:{{questions["quizDescription"]}}-->
+
+
+<!--Passing Score:{{questions["passingScore"]}}-->
+
+
+<!--Quiz Duration:{{questions["duration"]}}-->
+
+<!--</li> </ul>-->
+<!--<button type="button" class="btn btn-success quizTakerStart" ng-hide="firstQuestion" on-click="ng-hide=true">continue-->
+<!--</button>-->
+
+<!--</div>-->
+<!--</div>-->

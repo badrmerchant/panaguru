@@ -5,5 +5,5 @@ panaApp.controller("quizTakerCtrl",function($scope,$rootScope,$location,quizMake
    $scope.questions= quizMakerFactory.getQuizs()
     console.log( $scope.questions);
     $scope.currentTitle=$rootScope.currentCourse;
-    //alert("hello");
+//    alert("hello");
 })
