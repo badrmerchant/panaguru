@@ -3,7 +3,7 @@
  * Created by Badar on 9/12/2014.
  */
 
-panaApp.factory('quizMakerFactory', function ($localstorage, $modal) {
+panaApp.factory('quizMakerFactory', function ($localstorage) {
     var addQuiz;
     var addQuestion=[];
     var quizs=[];
